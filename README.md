@@ -1,36 +1,48 @@
-# BigPDF2MD
+<div align="center">
+  <h1>🚀 BigPDF2MD & MD2PDF Integration</h1>
+  <p><b>The ultimate two-way document converter for KDE Plasma (Dolphin)</b></p>
+  <img src="https://img.shields.io/badge/OS-BigLinux-blue?style=for-the-badge&logo=linux" alt="BigLinux">
+  <img src="https://img.shields.io/badge/Desktop-KDE%20Plasma-blue?style=for-the-badge&logo=kde" alt="KDE">
+  <img src="https://img.shields.io/badge/Python-3.x-yellow?style=for-the-badge&logo=python" alt="Python">
+</div>
 
-BigPDF2MD is a simple integration tool for KDE Plasma (Dolphin) specifically designed for BigLinux (and other Arch-based distros) to convert PDF files into Markdown (.md) with a single right-click.
+---
 
-It leverages the powerful `pymupdf4llm` library to extract high-quality markdown, making it ideal for LLMs and documentation purposes.
+## ✨ Features
 
-## Features
-- **One-Click Conversion:** Right-click any PDF in Dolphin and select "Convert PDF to Markdown (MD)".
-- **High Quality:** Uses `pymupdf4llm` for superior markdown formatting.
-- **System Notifications:** Integrates with KDE notifications to let you know when the conversion starts and finishes.
-- **Isolated Environment:** Installs dependencies in a Python Virtual Environment to keep your system clean.
+- 📄 **PDF ➡️ Markdown (MD):** Convert heavy PDF documents into clean, readable, and structured Markdown files. Powered by `pymupdf4llm` for the highest quality text extraction.
+- 📝 **Markdown (MD) ➡️ PDF:** Convert your `.md` documentation directly into beautiful `.pdf` files.
+- 🖱️ **One-Click Integration:** Native integration with Dolphin via KDE Service Menus. Just right-click!
+- 🔔 **System Notifications:** Seamlessly integrated with KDE notifications to let you know when conversions start and finish.
+- 📦 **Sandboxed Environment:** Safely installs dependencies in a Python Virtual Environment (`/opt/BigPDF2MD/venv`) without polluting your system.
 
-## Installation
+## 📥 Installation
 
-### Manual Installation
-Clone this repository and run the install script:
+### 🏆 Recommended: Pre-Built Arch Package (BigLinux)
+
+1. Download the latest `bigpdf2md-1.1-1-any.pkg.tar` from the [Releases](#).
+2. Install it using `pacman` or just double click it in Dolphin:
 ```bash
-git clone https://github.com/podheitor/BigPDF2MD.git
-cd BigPDF2MD
-chmod +x install.sh
-./install.sh
+sudo pacman -U bigpdf2md-1.1-1-any.pkg.tar
 ```
 
-### BigLinux / Arch Linux Package (pacman)
-You can build the Arch package using `makepkg`:
+### 🔧 Manual Build from Source
+
+You can build the Arch package yourself using `makepkg`:
 ```bash
 git clone https://github.com/podheitor/BigPDF2MD.git
 cd BigPDF2MD
 makepkg -si
 ```
 
-## Usage
-1. Open the Dolphin File Manager.
-2. Find a `.pdf` file.
-3. Right-click the file and select **Convert PDF to Markdown (MD)**.
-4. Wait for the success notification. The `.md` file will be created in the same folder.
+## 🛠️ Usage Guide
+
+1. Open your **Dolphin File Manager**.
+2. Find any `.pdf` or `.md` file.
+3. **Right-click** on the file:
+   - For PDFs: Select **Convert PDF to Markdown (MD)**
+   - For MDs: Select **Convert Markdown (MD) to PDF**
+4. Wait a few moments. A system notification will pop up when it's done!
+
+---
+*Developed with ❤️ for the BigLinux & KDE Community.*
