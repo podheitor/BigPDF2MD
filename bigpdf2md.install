@@ -1,0 +1,19 @@
+post_install() {
+    echo "Creating Python virtual environment in /opt/BigPDF2MD/venv..."
+    python3 -m venv /opt/BigPDF2MD/venv
+    
+    echo "Installing pymupdf4llm into the virtual environment (this may take a minute)..."
+    /opt/BigPDF2MD/venv/bin/pip install --upgrade pip
+    /opt/BigPDF2MD/venv/bin/pip install pymupdf4llm
+    
+    echo "Update complete! You can now use the 'Convert PDF to Markdown' option in Dolphin."
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    echo "Removing /opt/BigPDF2MD..."
+    rm -rf /opt/BigPDF2MD
+}

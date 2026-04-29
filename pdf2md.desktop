@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Actions=convertToMd;
+X-KDE-Priority=TopLevel
+
+[Desktop Action convertToMd]
+Name=Convert PDF to Markdown (MD)
+Icon=text-markdown
+Exec=/home/hfaria/Projeto/BigPDF2MD/run_convert.sh "%f"
